@@ -1,0 +1,189 @@
+[
+  {
+    "id": 271,
+    "name": "SERV – BANCO DE HORAS PONTUAL SUPORTE TÉCNICO ZICTEC (5H)",
+    "sku": "ZTSUP_BH_PONTUAL_5H",
+    "type": "simple",
+    "price": 4500.0,
+    "currency": "BRL",
+    "categories": "Suporte",
+    "permalink": "https://shop.zictec.com.br/product/serv-banco-de-horas-pontual-suporte-tecnico-zictec-5h/",
+    "summary": "Banco de horas pontual ZICTEC para suporte técnico sob demanda, sem contrato mensal, com 5 horas de atendimento e validade de 6 meses . Valor: R$ 900,00 por hora Total do pacote: R$ 4.500,00 Regime: sob demanda, conforme disponibilidade e escopo técnico Extra-horário: consome o dobro de horas do saldo"
+  },
+  {
+    "id": 259,
+    "name": "Pacote Especial – Server ProSBC c/ Lic 500 sess + StirShaken",
+    "sku": "",
+    "type": "woosb",
+    "price": 29750.18,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/pacote-especial-server-prosbc-c-lic-500-sess-stirshaken/",
+    "summary": "Pacote promocional exclusivo para implantação de STIR/SHAKEN em operadoras e provedores. Servidor ProSBC dedicado (DELL R420) com TelcoBridges ProSBC instalado Licença anual ProSBC para 500 sessões STIR/SHAKEN habilitado com scripts proprietários ZICTEC Consultoria de implantação (UAT + PROD), incluindo homologação e evidências para ABR/Neustar Sol"
+  },
+  {
+    "id": 230,
+    "name": "PROSBC HW-APP-ENT PRO13A STA WO LIC",
+    "sku": "TSBC-HW-APP-PRO13ASTA-WOL",
+    "type": "simple",
+    "price": 12149.25,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/prosbc-hw-app-ent-pro13a-sta-wo-lic/",
+    "summary": "Appliance ProSBC Standalone rack 19” 1U, homologado para interconexões STFC em SIP-I e intermediação de SIP Trunk. Equipado com fonte redundante hot-swap , 13 portas Gigabit Ethernet , processador Intel i5 (6 núcleos) e suporte a até 5.000 sessões SIP (conforme licença). ProSBC pré-instalado (licença não inclusa) . Uso exclusivamente standalone . I"
+  },
+  {
+    "id": 228,
+    "name": "SERV – PROFFESSIONAL SERVICES SUPPORT ProSBC 9×5 (10H)",
+    "sku": "ZTPSBC_PS9-5_10H",
+    "type": "simple",
+    "price": 15000.0,
+    "currency": "BRL",
+    "categories": "Suporte",
+    "permalink": "https://shop.zictec.com.br/product/serv-proffessional-services-support-prosbc-9x5-10h/",
+    "summary": "Banco de horas específico com quantidade mínima de 10hrs, compreendendo Suporte técnico especializado em regime 9×5 (horário comercial) , incluindo atualizações de software , apoio à instalação , diagnóstico e resolução de falhas , além de suporte à configuração do sistema . Contempla também customizações ou integrações de scripts de roteamento , c"
+  },
+  {
+    "id": 221,
+    "name": "PACOTE PROMO TOOLS ANATEL BASICO ANUAL",
+    "sku": "",
+    "type": "woosb",
+    "price": 20000.0,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/pacote-promo-tools-anatel-basico-anual/",
+    "summary": "PLANO ANUAL PROMOCIONAL Pacote Essencial Tools Anatel: Relatório Trafego Spoofing ( Despacho 262 Anatel ) TOOLS BASE, ZT_CDR_ADD, ZT_SR_ADD, ZT_POL_API, ZT_OWN_API."
+  },
+  {
+    "id": 225,
+    "name": "SAAS – ZICTEC TOOLS – SPOOFING REPORT PLANO:ANUAL",
+    "sku": "ZT_SR_ADD_A",
+    "type": "simple",
+    "price": 4000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-spoofing-report-planoanual/",
+    "summary": "ADD-ON SPOOFING REPORT. Utiliza os dados obtidos dos CDRs coletados em conjunto com a classificação das chamadas realizadas pela POLICY API, e as configurações específicas dos troncos de interconexão, para gerar o relatório de tráfego de chamadas irregulares ( Também chamado de Relatório de Spoofing, referente ao despacho 262 da Anatel ), cujo envi"
+  },
+  {
+    "id": 224,
+    "name": "SAAS – ZICTEC TOOLS – CDR COLECTOR MOD PLANO:ANUAL",
+    "sku": "ZT_CDR_ADD_A",
+    "type": "simple",
+    "price": 4000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-ownership-api-planoanual-copy/",
+    "summary": "ADD-ON CDR COLECTOR. Coletor de CDRs detalhados via protocolo RADIUS ONLINE ou CDR Texto OFFLINE. Exigido para relatórios de tráfego. Inclui vínculo com cadastro de operadoras e troncos para rotas de interconexão. PLANO ANUAL A licença irá expirar em 365 dias após a confirmação do pagamento e necessita ser renovada anualmente."
+  },
+  {
+    "id": 223,
+    "name": "SAAS – ZICTEC TOOLS – OWNERSHIP API PLANO:ANUAL",
+    "sku": "ZT_OWN_API_A",
+    "type": "simple",
+    "price": 4000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-ownership-api-planoanual/",
+    "summary": "API de classificação e bloqueio de chamadas irregulares, para tráfego ORIGINADO nos troncos habilitados e relatório de auditoria. PLANO ANUAL A licença irá expirar em 365 dias após a confirmação do pagamento e necessita ser renovada anualmente."
+  },
+  {
+    "id": 192,
+    "name": "SERV – SUPORTE BASICO ProSBC 9×5 (ANUAL)",
+    "sku": "ZTPSBCSUP95A",
+    "type": "simple",
+    "price": 30000.0,
+    "currency": "BRL",
+    "categories": "Suporte",
+    "permalink": "https://shop.zictec.com.br/product/suporte-tecnico-prosbc-9x5/",
+    "summary": "Suporte técnico especializado em regime 9×5 (horário comercial), incluindo atualizações de software , apoio à instalação , diagnóstico e resolução de falhas , além de suporte à configuração do sistema."
+  },
+  {
+    "id": 180,
+    "name": "SAAS – ZICTEC TOOLS – POLICY API PLANO:ANUAL",
+    "sku": "ZT_POL_ADD_A",
+    "type": "simple",
+    "price": 4000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-policy-api-planoanual/",
+    "summary": "API de classificação e bloqueio de chamadas irregulares, incluindo Blacklist estática e dinâmica, e Whitelist, para tráfego receptivo nos troncos habilitados e relatório de auditoria. PLANO MENSAL A licença irá expirar em 365 dias após a confirmação do pagamento e necessita ser renovada anualmente."
+  },
+  {
+    "id": 179,
+    "name": "SAAS – ZICTEC TOOLS – POLICY API PLANO:MENSAL",
+    "sku": "ZT_POL_ADD_M",
+    "type": "simple",
+    "price": 416.67,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-policy-api-planomensal/",
+    "summary": "API de classificação e bloqueio de chamadas irregulares, incluindo Blacklist estática e dinâmica, e Whitelist, para tráfego receptivo nos troncos habilitados e relatório de auditoria. PLANO MENSAL A licença irá expirar em 30 dias após a confirmação do pagamento e necessita ser renovada mensalmente."
+  },
+  {
+    "id": 177,
+    "name": "SAAS – ZICTEC TOOLS – CORE PLANO:ANUAL",
+    "sku": "ZTOOLS_BASE_A",
+    "type": "simple",
+    "price": 4000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/saas-zictec-tools-core-planoanual/",
+    "summary": "Acesso basico ao Tools, incluso API numberdb ( consulta numero ) PLANO ANUAL (20% Desconto) A licença irá expirar em 365 dias após a confirmação do pagamento."
+  },
+  {
+    "id": 109,
+    "name": "PACOTE PROMOCIONAL STIR_SHAKEN STARTER AS-OOB SAAS ANUAL",
+    "sku": "SAAS_STIAS_OOB_A",
+    "type": "simple",
+    "price": 39000.0,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/pacote-promocional-stir_shaken-starter-as-oob-saas-anual/",
+    "summary": "# Pacote STIR-SHAKEN Basico: – ISBC Cloud, para prestadoras STFC/SMP realizarem a autenticação obrigatória das chamadas, e fallback para rotas de terminação, compativel com a maioria das plataformas SIP do mercado. – Autenticação Out-of-band ( Token gerado na nuvem e recuperado na terminação pela operadora de destino ); # Solução ZICTEC (STFC-Tools"
+  },
+  {
+    "id": 108,
+    "name": "TRAD (CONV) DE PROT PAR INT DE REDES (GATEWAY) KMG 200 (LEGADO) – 1E1 – USADO",
+    "sku": "ZTKMG200USED",
+    "type": "simple",
+    "price": 1074.5,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/trad-conv-de-prot-par-int-de-redes-gateway-kmg-200-legado-1e1-usado/",
+    "summary": "GATEWAY E1 – KHOMP KMG 200 / 200 T (série MS – Legado) USADO – REVISADO – COM GARANTIA E NF. POSSUI MARCAS DE USO. ACOMPANHA ABAS DE MONTAGEM EM RACK 19″ ( Orelhas ) NAO ACOMPANHA CABO DE ENERGIA ( Cabo padrão igual de fonte de computador ou servidor ). GATEWAY COM SUPORTE A PROTOCOLO R2 E ISDN, – 1 porta E1 (Coaxial/BNC) até 30 canais de voz; – 1 "
+  },
+  {
+    "id": 104,
+    "name": "PROSBC HW-SRV-MID R420 STD WO LIC",
+    "sku": "TSBC-HW-SRV-MID-420STD-WOL",
+    "type": "simple",
+    "price": 9049.4,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/prosbc-hw-srv-mid-r420-std-wo-lic/",
+    "summary": "SERVIDOR PROSBC HW-SRV-MID-420 DELL POWEREDGE R420 – iDRAC7 ENTERPRISE OOB WITH LIFECYCLE CONTROLLER – FONTE: 2x 350W REDUNDANTES – PROCESSADOR: 1x iNTEL XEON E5-2470V2 @ 2.40GHz 10c – MEMORIA: 32GB DDR3 ECC 1600MHZ OU COMPATIVEL – REDE: 2x BROADCOM GIGABIT ETHERNET ONBOARD(MGMT) + 4x INTEL I350 OU COMPATIVEL GIGABIT ETHERNET ( i350-4T / VOIP ) – A"
+  },
+  {
+    "id": 99,
+    "name": "STIR-SHAKEN SETUP",
+    "sku": "ZTSHAKENDEPLOY",
+    "type": "simple",
+    "price": 14285.78,
+    "currency": "BRL",
+    "categories": "",
+    "permalink": "https://shop.zictec.com.br/product/stir-shaken-setup/",
+    "summary": "Pacote especial Implantação STIR-SHAKEN. (SETUP) Inclui: – Ajustes de configuração do SBC (ProSBC), com implantação dos scripts customizados proprietários da ZICTEC; – Configuração para realizar a conexão com o serviço de autenticação; – Testes no ambiente UAT; – Homologação do serviço de autenticação e testes; – Envio de envidencias para ABR/Neust"
+  },
+  {
+    "id": 45,
+    "name": "LICENCA PROSBC ANUAL",
+    "sku": "PROSBCLIC",
+    "type": "simple",
+    "price": 12.83,
+    "currency": "BRL",
+    "categories": "Licenca Anual",
+    "permalink": "https://shop.zictec.com.br/product/licenca-prosbc-anual/",
+    "summary": "Licença Dedicada para SBC Telcobridges. ATENCAO: Valor por sessão unitária. Qtde mínima 500 sessões Validade 1 ano. Licenciamento provido pela ZICTEC, faturado com NFSe. Não incluso serviços de suporte, licença de transcoding, outros. Suporte ao produto poderá ser fornecido de forma avulsa, por banco de horas ou contrato mensal."
+  }
+]

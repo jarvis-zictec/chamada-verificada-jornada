@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chamada Verificada ZICTEC — Jornada Comercial</title>
+  <meta name="description" content="Página interna/publicável da ZICTEC para simplificar a jornada comercial e técnica de Chamada Verificada, STIR/SHAKEN, Autenticação e Origem Verificada." />
+  <link rel="preload" as="image" href="assets/hero.png" />
+  <style>
+    :root {
+      --orange:#ff5a1f; --orange2:#ff7a3d; --navy:#1b1648; --blue:#24215f; --ink:#171729; --muted:#66657a; --bg:#fbf8f6; --soft:#fff1ea; --line:#ebe4df; --green:#11a36a; --white:#fff;
+      --shadow:0 24px 80px rgba(28,20,72,.13); --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff 0%,#fff7f2 52%,#fff 100%);line-height:1.55}
+    a{color:inherit} .container{width:min(1180px,calc(100% - 38px));margin:auto} .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(235,228,223,.72)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px} .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--navy)} .brand img{height:38px;width:auto} .menu{display:flex;gap:18px;align-items:center;font-size:14px;color:#3c3a50} .menu a{text-decoration:none} .menu a:hover{color:var(--orange)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;transition:.2s ease;white-space:nowrap} .btn-primary{background:var(--orange);color:white;box-shadow:0 14px 34px rgba(255,90,31,.28)} .btn-primary:hover{transform:translateY(-2px);background:#e84d15} .btn-ghost{background:white;color:var(--navy);border-color:var(--line)} .btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+    .hero{padding:76px 0 44px} .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center} .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--soft);color:var(--orange);font-weight:900;font-size:13px;letter-spacing:.04em;text-transform:uppercase} h1{font-size:clamp(42px,5.5vw,76px);line-height:.98;margin:22px 0 20px;color:var(--navy);letter-spacing:-.055em} .lead{font-size:clamp(18px,2vw,23px);color:#4a4860;max-width:680px} .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px} .hero-card{position:relative;background:linear-gradient(145deg,#fff,#fff1ea);border:1px solid #f0ded5;border-radius:36px;padding:22px;box-shadow:var(--shadow);overflow:hidden} .hero-card img{width:100%;display:block;border-radius:24px} .hero-badge{position:absolute;right:26px;bottom:26px;background:rgba(27,22,72,.92);color:white;border-radius:20px;padding:16px 18px;max-width:310px;box-shadow:0 20px 60px rgba(0,0,0,.2)} .hero-badge strong{display:block;color:#ffb199}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px} .stat{background:white;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 40px rgba(20,10,40,.06)} .stat b{display:block;color:var(--orange);font-size:31px;line-height:1} .stat span{font-size:13px;color:var(--muted)}
+    section{padding:70px 0} .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:28px} h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin:0;color:var(--navy);letter-spacing:-.035em} .section-head p{max-width:570px;color:var(--muted);font-size:17px} .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 44px rgba(27,22,72,.06)} .card.highlight{background:linear-gradient(145deg,var(--navy),#302884);color:white;border-color:transparent} .card.highlight h3,.card.highlight p,.card.highlight li{color:white} .card.highlight ul{color:white} .card h3{margin:0 0 10px;color:var(--navy);font-size:22px;line-height:1.15} .card p{color:var(--muted);margin:0} .icon{width:46px;height:46px;border-radius:15px;background:var(--soft);color:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:18px} .highlight .icon{background:rgba(255,255,255,.13);color:#ffb199}
+    .concept{background:linear-gradient(180deg,#fff7f2,#fff)} .concept-map{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch} .arrow{display:flex;align-items:center;color:var(--orange);font-size:34px;font-weight:900} .note{margin-top:22px;padding:18px 20px;border-left:5px solid var(--orange);background:#fff;border-radius:16px;color:#4e4c61}
+    .journey{counter-reset:step} .step{position:relative;padding-left:72px;min-height:120px} .step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:var(--orange);color:white;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(255,90,31,.28)} .step:not(:last-child):after{content:"";position:absolute;left:23px;top:54px;width:2px;height:calc(100% - 42px);background:#f0cdbd}
+    .package{display:flex;flex-direction:column;gap:16px} .package .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);font-weight:900} .package.highlight .label{color:#ffb199} .package ul{margin:0;padding-left:18px;color:#55536a} .package li{margin:7px 0} .package .best{display:inline-flex;align-self:flex-start;padding:7px 10px;border-radius:999px;background:#eafff5;color:#08784c;font-size:12px;font-weight:900}
+    .matrix{overflow:hidden;padding:0} table{width:100%;border-collapse:collapse;background:white} th,td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top} th{background:var(--navy);color:white;font-size:13px;text-transform:uppercase;letter-spacing:.04em} td{color:#4d4b62} tr:last-child td{border-bottom:0}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px} .product-card{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 34px rgba(27,22,72,.05)} .product-card h3{font-size:16px;color:var(--navy);line-height:1.2;min-height:58px;margin:10px 0} .pill{display:inline-flex;padding:6px 9px;border-radius:999px;background:var(--soft);color:var(--orange);font-size:11px;font-weight:900} .sku{font-size:12px;color:var(--muted);min-height:34px} .price{font-size:18px;font-weight:900;color:var(--navy);margin:8px 0} .product-card a{font-weight:800;color:var(--orange);text-decoration:none;font-size:14px}
+    .configurator{background:var(--navy);color:white} .configurator h2,.configurator .section-head p{color:white} .quiz{display:grid;grid-template-columns:repeat(4,1fr);gap:15px} .quiz .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);box-shadow:none} .quiz .card h3{color:white} .quiz .card p{color:#d8d6e8} .quiz .icon{background:rgba(255,255,255,.12);color:#ffb199}
+    .faq details{background:white;border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:12px 0} .faq summary{cursor:pointer;font-weight:900;color:var(--navy)} .faq p{color:var(--muted);margin-bottom:0} .cta{background:linear-gradient(135deg,var(--orange),#f97316);border-radius:36px;padding:42px;color:white;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;box-shadow:0 30px 90px rgba(255,90,31,.25)} .cta h2{color:white} .cta p{font-size:18px;max-width:720px} .cta .btn{background:white;color:var(--orange)} footer{padding:36px 0;color:#7b798b;border-top:1px solid var(--line);background:white} footer .container{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media (max-width:960px){.hero-grid,.grid-2,.concept-map,.cta{grid-template-columns:1fr} .grid-3,.stats,.products,.quiz{grid-template-columns:repeat(2,1fr)} .arrow{justify-content:center;transform:rotate(90deg)} .menu{display:none}}
+    @media (max-width:620px){.grid-3,.stats,.products,.quiz{grid-template-columns:1fr} .hero{padding-top:42px} .cta{padding:28px} th,td{padding:12px}}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><img src="assets/logo_blue.png" alt="ZICTEC"/> <span>Chamada Verificada</span></a><div class="menu"><a href="#conceitos">Conceitos</a><a href="#pacotes">Pacotes</a><a href="#jornada">Jornada</a><a href="#shop">Shop</a><a href="#faq">FAQ</a><a class="btn btn-primary" href="https://www.calendly.com/zictec/reuniao" target="_blank">Agendar diagnóstico</a></div></div></nav>
+  <main id="top">
+    <section class="hero"><div class="container hero-grid"><div><span class="eyebrow">ZICTEC · STIR/SHAKEN · Origem Verificada</span><h1>Uma jornada simples para autenticar chamadas e evoluir para Origem Verificada.</h1><p class="lead">Página de trabalho para alinhar equipe comercial, operação técnica e cliente: conceitos corretos, pacotes claros, checklist de contratação e caminho para ecommerce.</p><div class="hero-actions"><a class="btn btn-primary" href="#configurador">Encontrar pacote recomendado</a><a class="btn btn-ghost" href="#pacotes">Ver pacotes</a></div><div class="stats"><div class="stat"><b>Start</b><span>cumprir requisito regulatório</span></div><div class="stat"><b>Operate</b><span>SaaS + suporte + auditoria</span></div><div class="stat"><b>Hybrid</b><span>ProSBC + API ZICTEC</span></div><div class="stat"><b>Modernize</b><span>SBC, licença e topologia</span></div></div></div><aside class="hero-card"><img src="assets/hero.png" alt="Ilustração Chamada Verificada"/><div class="hero-badge"><strong>Princípio central</strong>Identificação/Origem Verificada depende de Autenticação, mas não é a mesma coisa.</div></aside></div></section>
+
+    <section id="conceitos" class="concept"><div class="container"><div class="section-head"><h2>Conceitos corretos para não vender errado</h2><p>STIR/SHAKEN é a tecnologia. Autenticação e Identificação são etapas diferentes da jornada de confiança da chamada.</p></div><div class="concept-map"><article class="card"><div class="icon">1</div><h3>STIR/SHAKEN</h3><p>Protocolo/tecnologia usado para dar confiabilidade à origem da chamada por meio de assinatura, validação e regras técnicas da cadeia de interconexão.</p></article><div class="arrow">→</div><article class="card highlight"><div class="icon">2</div><h3>Autenticação de chamadas</h3><p>É realizar o envio das chamadas nas interconexões autenticadas conforme regras da Anatel e do ecossistema operacional da ABR Telecom.</p></article></div><div class="concept-map" style="margin-top:18px"><article class="card"><div class="icon">3</div><h3>Identificação / Branded Call</h3><p>No Brasil, é implantado pela Anatel sob o nome comercial <strong>Origem Verificada</strong>. É a camada que exibe marca/logo e se vincula a campanhas.</p></article><div class="arrow">↑</div><article class="card"><div class="icon">✓</div><h3>Dependência</h3><p>A Identificação depende de Autenticação. Primeiro a chamada precisa ser autenticável/confiável; depois pode receber camada de marca/campanha.</p></article></div><p class="note"><strong>Terminologia:</strong> usar <strong>ABR Telecom</strong> como referência institucional e operacional, não “BR”. Site institucional: <a href="https://www.abrtelecom.com.br" target="_blank" rel="noopener">www.abrtelecom.com.br</a>.</p></div></section>
+
+    <section id="pacotes"><div class="container"><div class="section-head"><h2>Oferta em caminhos simples</h2><p>Reduzir a negociação desgastante criando trilhas claras: do mínimo regulatório à modernização completa.</p></div><div class="grid-3">
+      <article class="card package"><span class="label">A · CAPEX / Direto</span><h3>Start / Essencial Regulatória</h3><p>Para quem quer iniciar com o requisito mínimo e homologação.</p><ul><li>Diagnóstico inicial</li><li>Setup STIR/SHAKEN</li><li>UAT, homologação e evidências</li><li>Go-live assistido</li><li>Suporte por banco de horas</li></ul></article>
+      <article class="card package highlight"><span class="label">B · OPEX / SaaS</span><h3>Operate / SaaS ZICTEC</h3><p>Para quem quer suporte, relatórios e menor fricção técnica.</p><span class="best">Recomendado para operação assistida</span><ul><li>API/SaaS ZICTEC</li><li>Autenticação OOB/INB conforme desenho</li><li>Relatórios e auditoria</li><li>Suporte recorrente</li><li>Base para campanhas futuras</li></ul></article>
+      <article class="card package"><span class="label">C · Híbrido/Modernize</span><h3>Hybrid / Modernize ProSBC</h3><p>Para aproveitar ProSBC existente ou resolver topologia e redundância.</p><ul><li>ProSBC do cliente + API ZICTEC</li><li>Script proprietário licenciado</li><li>Licenças/sessões quando aplicável</li><li>Hardware/upgrade opcional</li><li>Revisão de interconexões</li></ul></article>
+    </div></div></section>
+
+    <section id="jornada" class="journey"><div class="container"><div class="section-head"><h2>Jornada ideal para cliente e comercial</h2><p>O ecommerce deve funcionar como contratação guiada, não como compra cega de implantação complexa.</p></div><div class="grid-2"><div>
+      <article class="step"><h3>Educar em 2 minutos</h3><p>Explicar Autenticação vs Identificação, papel do STIR/SHAKEN e por que Origem Verificada depende de autenticação.</p></article>
+      <article class="step"><h3>Escolher objetivo</h3><p>Cumprir regulação, operar com suporte, manter ProSBC atual, modernizar topologia ou ativar campanhas.</p></article>
+      <article class="step"><h3>Responder checklist técnico</h3><p>SBC/vendor, rotas, volumetria, status ABR, necessidade de relatórios, campanhas e suporte.</p></article>
+      <article class="step"><h3>Receber pacote recomendado</h3><p>Start, Operate, Hybrid ou Modernize com add-ons opcionais.</p></article>
+      <article class="step"><h3>Checkout ou lead qualificado</h3><p>Compra inicia validação/kickoff; ambientes complexos viram proposta formal.</p></article>
+    </div><aside class="card highlight"><h3>Regra comercial importante</h3><p>A contratação pode iniciar o processo, mas produção depende de validação técnica, premissas, credenciais, rotas, homologação e aceite. Isso protege a ZICTEC e deixa claro para o cliente que não é “plug and play universal”.</p><br/><img src="assets/technical.png" alt="Diagrama técnico" style="width:100%;border-radius:20px"></aside></div></div></section>
+
+    <section id="configurador" class="configurator"><div class="container"><div class="section-head"><h2>Mini-configurador para a equipe comercial</h2><p>As perguntas abaixo podem virar formulário no site, CRM ou pré-checkout.</p></div><div class="quiz">
+      <article class="card"><div class="icon">1</div><h3>Qual é o objetivo?</h3><p>Regulação, operação assistida, topologia, campanhas ou tudo junto?</p></article>
+      <article class="card"><div class="icon">2</div><h3>Qual SBC/vendor?</h3><p>ProSBC/Telcobridges, outro vendor, ambiente legado ou “não sei”.</p></article>
+      <article class="card"><div class="icon">3</div><h3>Status ABR?</h3><p>Sem adesão, em adesão, UAT, produção ou credenciais disponíveis.</p></article>
+      <article class="card"><div class="icon">4</div><h3>Quer auditoria?</h3><p>Relatórios de autenticação, falhas, volumetria e suporte operacional.</p></article>
+    </div></div></section>
+
+    <section><div class="container"><div class="section-head"><h2>Matriz rápida de recomendação</h2><p>Para o comercial responder rápido sem transformar toda conversa em engenharia consultiva.</p></div><div class="card matrix"><table><thead><tr><th>Sinal do cliente</th><th>Oferta sugerida</th><th>Próximo passo</th></tr></thead><tbody>
+      <tr><td>“Só preciso cumprir a obrigação”</td><td>Start / Essencial Regulatória</td><td>Checklist + setup/homologação</td></tr>
+      <tr><td>“Não quero dor técnica depois do go-live”</td><td>Operate / SaaS ZICTEC</td><td>API + relatórios + suporte recorrente</td></tr>
+      <tr><td>“Tenho ProSBC e quero aproveitar”</td><td>Hybrid ProSBC</td><td>Validar versão/licenças/topologia</td></tr>
+      <tr><td>“Meu SBC está antigo/no limite”</td><td>Modernize</td><td>ProSBC/hardware/licenças + revisão de rotas</td></tr>
+      <tr><td>“Quero logo/nome na chamada”</td><td>Add-on Campanhas / Origem Verificada</td><td>Confirmar autenticação e processo de backoffice</td></tr>
+      <tr><td>“Quero direto na ABR”</td><td>CAPEX/Direto com ressalvas</td><td>Alertar menor visibilidade operacional ZICTEC</td></tr>
+    </tbody></table></div></div></section>
+
+    <section id="shop"><div class="container"><div class="section-head"><h2>Produtos atuais que podem compor a jornada</h2><p>Base consultada no shop.zictec.com.br via Store API pública read-only. Próximo passo: normalizar SKUs e criar pacotes com nomes comerciais claros.</p></div><div class="products"><article class="product-card">
+      <span class="pill">SaaS / Operação assistida</span>
+      <h3>STIR_SHAKEN STARTER AS-OOB SAAS ANUAL</h3>
+      <p class="sku">ID 109 · SAAS_STIAS_OOB_A</p>
+      <p class="price">R$ 39.000,00</p>
+      <a href="https://shop.zictec.com.br/product/pacote-promocional-stir_shaken-starter-as-oob-saas-anual/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Setup e homologação</span>
+      <h3>STIR-SHAKEN SETUP</h3>
+      <p class="sku">ID 99 · ZTSHAKENDEPLOY</p>
+      <p class="price">R$ 14.285,78</p>
+      <a href="https://shop.zictec.com.br/product/stir-shaken-setup/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Bundle com hardware/licença</span>
+      <h3>Pacote Especial – Server ProSBC c/ Lic 500 sess + StirShaken</h3>
+      <p class="sku">ID 259 · SKU pendente</p>
+      <p class="price">R$ 29.750,18</p>
+      <a href="https://shop.zictec.com.br/product/pacote-especial-server-prosbc-c-lic-500-sess-stirshaken/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Suporte / banco de horas</span>
+      <h3>BANCO DE HORAS PONTUAL SUPORTE TÉCNICO ZICTEC (5H)</h3>
+      <p class="sku">ID 271 · ZTSUP_BH_PONTUAL_5H</p>
+      <p class="price">R$ 4.500,00</p>
+      <a href="https://shop.zictec.com.br/product/serv-banco-de-horas-pontual-suporte-tecnico-zictec-5h/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Suporte / banco de horas</span>
+      <h3>PROFFESSIONAL SERVICES SUPPORT ProSBC 9×5 (10H)</h3>
+      <p class="sku">ID 228 · ZTPSBC_PS9-5_10H</p>
+      <p class="price">R$ 15.000,00</p>
+      <a href="https://shop.zictec.com.br/product/serv-proffessional-services-support-prosbc-9x5-10h/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Suporte / banco de horas</span>
+      <h3>SUPORTE BASICO ProSBC 9×5 (ANUAL)</h3>
+      <p class="sku">ID 192 · ZTPSBCSUP95A</p>
+      <p class="price">R$ 30.000,00</p>
+      <a href="https://shop.zictec.com.br/product/suporte-tecnico-prosbc-9x5/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Licença por sessão</span>
+      <h3>LICENCA PROSBC ANUAL</h3>
+      <p class="sku">ID 45 · PROSBCLIC</p>
+      <p class="price">R$ 12,83</p>
+      <a href="https://shop.zictec.com.br/product/licenca-prosbc-anual/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Hardware ProSBC</span>
+      <h3>PROSBC HW-SRV-MID R420 STD WO LIC</h3>
+      <p class="sku">ID 104 · TSBC-HW-SRV-MID-420STD-WOL</p>
+      <p class="price">R$ 9.049,40</p>
+      <a href="https://shop.zictec.com.br/product/prosbc-hw-srv-mid-r420-std-wo-lic/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Hardware ProSBC</span>
+      <h3>PROSBC HW-APP-ENT PRO13A STA WO LIC</h3>
+      <p class="sku">ID 230 · TSBC-HW-APP-PRO13ASTA-WOL</p>
+      <p class="price">R$ 12.149,25</p>
+      <a href="https://shop.zictec.com.br/product/prosbc-hw-app-ent-pro13a-sta-wo-lic/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Tools / auditoria</span>
+      <h3>CORE PLANO:ANUAL</h3>
+      <p class="sku">ID 177 · ZTOOLS_BASE_A</p>
+      <p class="price">R$ 4.000,00</p>
+      <a href="https://shop.zictec.com.br/product/saas-zictec-tools-core-planoanual/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Tools / auditoria</span>
+      <h3>POLICY API PLANO:ANUAL</h3>
+      <p class="sku">ID 180 · ZT_POL_ADD_A</p>
+      <p class="price">R$ 4.000,00</p>
+      <a href="https://shop.zictec.com.br/product/saas-zictec-tools-policy-api-planoanual/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Tools / auditoria</span>
+      <h3>CDR COLECTOR MOD PLANO:ANUAL</h3>
+      <p class="sku">ID 224 · ZT_CDR_ADD_A</p>
+      <p class="price">R$ 4.000,00</p>
+      <a href="https://shop.zictec.com.br/product/saas-zictec-tools-ownership-api-planoanual-copy/" target="_blank" rel="noopener">Ver no shop</a>
+    </article><article class="product-card">
+      <span class="pill">Tools / auditoria</span>
+      <h3>SPOOFING REPORT PLANO:ANUAL</h3>
+      <p class="sku">ID 225 · ZT_SR_ADD_A</p>
+      <p class="price">R$ 4.000,00</p>
+      <a href="https://shop.zictec.com.br/product/saas-zictec-tools-spoofing-report-planoanual/" target="_blank" rel="noopener">Ver no shop</a>
+    </article></div></div></section>
+
+    <section><div class="container"><div class="section-head"><h2>Pacotes futuros recomendados para ecommerce</h2><p>Estrutura pensada para reduzir negociação excessiva sem perder controle técnico.</p></div><div class="grid-3">
+      <article class="card"><div class="icon">S</div><h3>ZTCV_START_SETUP</h3><p>Chamada Verificada Start: diagnóstico, setup, homologação e go-live assistido.</p></article>
+      <article class="card"><div class="icon">O</div><h3>ZTCV_SAAS_OPERATE_A</h3><p>SaaS Operate anual: API ZICTEC, relatórios, auditoria e suporte recorrente.</p></article>
+      <article class="card"><div class="icon">H</div><h3>ZTCV_HYBRID_PROSBC_A</h3><p>Híbrido ProSBC: ambiente do cliente + API ZICTEC + script licenciado.</p></article>
+      <article class="card"><div class="icon">M</div><h3>ZTCV_MODERNIZE_PROSBC</h3><p>Modernização com ProSBC, licença, revisão de topologia e STIR/SHAKEN.</p></article>
+      <article class="card"><div class="icon">C</div><h3>ZTCV_CAMPAIGNS_M</h3><p>Gestão de campanhas, identificação enriquecida e backoffice Origem Verificada.</p></article>
+      <article class="card"><div class="icon">+</div><h3>Add-ons</h3><p>Banco de horas, suporte 9×5, CDR, Spoofing Report, Policy API e Ownership API.</p></article>
+    </div></div></section>
+
+    <section id="faq" class="faq"><div class="container"><div class="section-head"><h2>FAQ comercial para reduzir objeções</h2><p>Respostas curtas para a equipe usar em reunião, WhatsApp ou proposta.</p></div>
+      <details open><summary>STIR/SHAKEN é a mesma coisa que Origem Verificada?</summary><p>Não. STIR/SHAKEN é protocolo/tecnologia. Origem Verificada é a camada brasileira de identificação/branded call, ligada a marca/logo/campanhas, e depende de Autenticação.</p></details>
+      <details><summary>Autenticação é a mesma coisa que Identificação?</summary><p>Não. Autenticação é enviar chamadas nas interconexões autenticadas conforme regras da Anatel. Identificação é exibir marca/logo/finalidade — Branded Call/Origem Verificada.</p></details>
+      <details><summary>Precisa comprar SBC novo?</summary><p>Não obrigatoriamente. Novo SBC é recomendação quando há limitação de capacidade, topologia antiga, necessidade de redundância ou projeto de modernização.</p></details>
+      <details><summary>Por que usar API/SaaS ZICTEC?</summary><p>Porque preserva relatórios, auditoria, volumetria e capacidade de troubleshooting pela ZICTEC. Conexão direta à ABR pode reduzir essa visibilidade.</p></details>
+      <details><summary>O ecommerce fecha a implantação automaticamente?</summary><p>Não deve prometer isso. A compra inicia contratação/validação; produção depende de ambiente, rotas, credenciais, homologação e aceite.</p></details>
+    </div></section>
+
+    <section><div class="container"><div class="cta"><div><h2>Próximo passo: transformar esta página em playbook + funil</h2><p>Criar formulário de checklist, páginas de pacote no shop, templates de proposta e roteiro comercial para cada trilha.</p></div><a class="btn" href="https://www.calendly.com/zictec/reuniao" target="_blank">Agendar reunião ZICTEC</a></div></div></section>
+  </main>
+  <footer><div class="container"><span>ZICTEC · Chamada Verificada · Jornada Comercial</span><span>Contato: contato@zictec.com.br · +55 47 3306-4435</span></div></footer>
+</body>
+</html>
