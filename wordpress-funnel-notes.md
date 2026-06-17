@@ -62,7 +62,7 @@ Integrações possíveis na próxima etapa:
 - `ZT_STIAS_PROSBC_SETUP_CLIENT_A`
 - `ZT_STIAS_PROSBC_CLIENT_A`
 - `ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A`
-- `ZT_PROSBC_HW500_STIAS_HYBRID_API_A` — usar link com cupom automático: `https://shop.zictec.com.br/product/server-prosbc-500-sessoes-setup-client-sti-as-api-tools-pacote-hibrido-1-ano/?apply_coupon=hybrid7800&lang=pt-br`
+- `ZT_PROSBC_HW500_STIAS_HYBRID_API_A` — usar link com cupom automático: `https://shop.zictec.com.br/checkout/?add-to-cart=302&apply_coupon=hybrid7800&lang=pt-br`
 - cupom citado: `hybrid7800`
 
 ## Checklist de validação no WordPress
