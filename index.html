@@ -89,9 +89,16 @@
         </div></div>
         <div class="question"><h3>4. Operação desejada</h3><div class="options">
           <label class="option"><input type="radio" name="ops" value="basic" checked> Projeto pontual + banco de horas</label>
-          <label class="option"><input type="radio" name="ops" value="reports"> Relatórios, auditoria e suporte recorrente</label>
-          <label class="option"><input type="radio" name="ops" value="full"> Operação assistida com API/SaaS ZICTEC</label>
+          <label class="option"><input type="radio" name="ops" value="reports"> Tools, relatórios, auditoria e API REST</label>
+          <label class="option"><input type="radio" name="ops" value="sip"> SIP via ISBC compartilhado</label>
+          <label class="option"><input type="radio" name="ops" value="full"> ProSBC + Tools/API no mesmo desenho</label>
           <label class="option"><input type="radio" name="ops" value="campaigns"> Gestão de campanhas/identificação enriquecida</label>
+        </div></div>
+        <div class="question"><h3>5. Servidor físico</h3><div class="options">
+          <label class="option"><input type="radio" name="server" value="no" checked> Não precisa / já existe</label>
+          <label class="option"><input type="radio" name="server" value="yes"> Precisa incluir servidor físico</label>
+          <label class="option"><input type="radio" name="server" value="unsure"> Não sabe / validar topologia</label>
+          <label class="option"><input type="radio" name="server" value="later"> Tratar servidor em proposta separada</label>
         </div></div>
       </form>
       <aside class="result-card" aria-live="polite">
@@ -103,7 +110,7 @@
         <ul class="next-list" id="recNext"></ul>
         <div class="result-actions">
           <button type="button" class="btn btn-primary btn-small" id="copyBriefing">Copiar briefing</button>
-          <a class="btn btn-ghost btn-small" href="#shop">Ver itens do shop</a>
+          <a class="btn btn-ghost btn-small" id="recShop" href="#shop">Ver SKU no shop</a>
           <a class="btn btn-ghost btn-small" href="#faq">FAQ de objeções</a>
         </div>
       </aside>
@@ -242,25 +249,44 @@
   <footer><div class="container"><span>ZICTEC · Chamada Verificada · Jornada Comercial</span><span>Contato: contato@zictec.com.br · +55 47 3306-4435</span></div></footer>
   <div class="toast" id="toast">Briefing copiado.</div>
   <script>
+    const shopLinks = {
+      setupClient: 'https://shop.zictec.com.br/product/stir-shaken-setup-client-prosbc-zictec-1-ano-1-sbc/',
+      hwSetupClient: 'https://shop.zictec.com.br/product/server-prosbc-500-sessoes-setup-client-sti-as-pacote-completo/',
+      api: 'https://shop.zictec.com.br/product/stir-shaken-api-rest-zictec-tools-licenca-anual/',
+      saasSip: 'https://shop.zictec.com.br/product/pacote-promocional-stir_shaken-starter-as-oob-saas-anual/',
+      hybridBundle: 'https://shop.zictec.com.br/product/stir-shaken-api-rest-client-prosbc-bundle-saas-hibrido-anual/',
+      hybridServer: 'https://shop.zictec.com.br/product/server-prosbc-500-sessoes-setup-client-sti-as-api-tools-pacote-hibrido-1-ano/',
+      consult: '#pre-pacotes'
+    };
     const packages = {
-      start: {title:'ZT_STIAS_PROSBC_SETUP_CLIENT_A · SETUP + Client ProSBC 1 ano', text:'Recomendado para o primeiro SBC ProSBC: une implantação/homologação/produção com ABR + licença Client STI-AS por 1 ano, evitando compra incompleta.', tags:['ZT_STIAS_PROSBC_SETUP_CLIENT_A','30% off','R$ 18.400,04'], next:['Confirmar se é o primeiro SBC ProSBC do projeto','Validar contrato vigente para boleto em até 12x sem juros','Registrar que no 2º ano renova apenas a licença Client ProSBC']},
-      operate: {title:'Starter AS-OOB SaaS / ISBC Cloud', text:'Recomendado quando o cliente precisa de SIP/ISBC Cloud consumindo a API ZICTEC; tem bonificação promocional de isenção de setup.', tags:['SaaS + SIP','ISBC Cloud','Setup isento'], next:['Validar limites do Plano Light','Confirmar IPs de origem, CAPS e bilhetes/mês','Ofertar Starter AS-OOB SaaS com isenção promocional de setup']},
-      hybrid: {title:'API REST + Client ProSBC', text:'Para ProSBC existente: API REST, client/script por SBC ou bundle. Setup pode ser isento em ProSBC homologado com suporte; ambiente diferente pode exigir SETUP A.', tags:['API REST','Client ProSBC','Setup conforme cenário'], next:['Validar se o ProSBC já é existente/homologado e tem suporte','Checar quantidade de SBCs: primeiro vs adicionais','Definir se precisa SETUP A, licença D, API C ou bundle']},
-      modernize: {title:'ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A · Server + 500 sessões + SETUP + Client', text:'Quando o projeto precisa sair funcional com servidor ProSBC, licença básica de 500 sessões e ZT_STIAS_PROSBC_SETUP_CLIENT_A para 1 SBC.', tags:['Hardware','500 sessões','SETUP + Client'], next:['Confirmar se R420 mid atende capacidade/topologia','Validar necessidade de redundância, transcoding e expansões','Separar suporte operacional/banco de horas como contratação adicional']},
-      campaigns: {title:'Origem Verificada / Campanhas', text:'Camada de Identificação/Branded Call com logo e campanhas, dependente de Autenticação funcionando.', tags:['Identificação','Branded Call','Campanhas'], next:['Confirmar Autenticação em produção ou plano para ativá-la','Levantar marcas/campanhas e responsáveis','Ofertar add-on de backoffice/campanhas']}
+      start: {title:'ZT_STIAS_PROSBC_SETUP_CLIENT_A · SETUP + Client ProSBC 1 ano', text:'Para o primeiro SBC ProSBC já existente: une implantação/homologação/produção com ABR + licença Client STI-AS por 1 ano, sem Tools/relatórios/API.', tags:['Sem servidor','Com setup','Sem Tools','R$ 18.400,04'], url:shopLinks.setupClient, next:['Confirmar se é o primeiro SBC ProSBC do projeto','Validar contrato vigente para boleto em até 12x sem juros','Registrar que no 2º ano renova apenas a licença Client ProSBC']},
+      modernize: {title:'ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A · Server + 500 sessões + SETUP + Client', text:'Para sair com a base ProSBC funcional: servidor físico, 500 sessões, setup e Client STI-AS. Não inclui Tools/relatórios/API.', tags:['SERVIDOR FÍSICO INCLUSO','Com setup','Sem Tools','R$ 33.864,44'], url:shopLinks.hwSetupClient, next:['Confirmar se o servidor R420 mid atende capacidade/topologia','Validar necessidade de redundância, transcoding e expansões','Separar suporte operacional/banco de horas como contratação adicional']},
+      api: {title:'ZT_STIAS_API_A · Tools / Relatórios / API REST', text:'Para cliente compatível que consome a solução ZICTEC diretamente por API REST, sem ISBC/SIP e sem servidor físico dedicado.', tags:['REST direto','Tools + relatórios','Sem ISBC','R$ 31.200,00'], url:shopLinks.api, next:['Validar compatibilidade técnica para consumo REST direto','Confirmar necessidade de validação de número A, CDR e auditoria','Se houver SIP, trocar para SAAS_STIAS_OOB_A']},
+      operate: {title:'SAAS_STIAS_OOB_A · Tools + ISBC SIP compartilhado', text:'Para quem precisa consumir a solução ZICTEC via SIP: adiciona ISBC compartilhado à camada Tools/relatórios/auditoria.', tags:['SIP via ISBC','Tools + relatórios','Setup isento','R$ 39.000,00'], url:shopLinks.saasSip, next:['Validar limites do Plano Light: CAPS, bilhetes/mês e IPs origem','Confirmar que o cliente precisa de SIP, não REST direto','Registrar isenção promocional de setup quando aplicável']},
+      hybrid: {title:'ZT_STIAS_HYBRID_BUNDLE_A · API + Client ProSBC', text:'Bundle anual sem servidor e sem setup: API REST SaaS ZICTEC Tools + Client ProSBC para 1 SBC; referência de operação/renovação.', tags:['Sem servidor','Sem setup','Com Tools','R$ 39.000,00'], url:shopLinks.hybridBundle, next:['Confirmar que setup/homologação inicial já foi resolvido ou será contratado à parte','Validar ProSBC existente/homologado','Usar como referência anual de renovação do desenho híbrido']},
+      hybridServer: {title:'ZT_PROSBC_HW500_STIAS_HYBRID_API_A · Server + 500 sessões + Client + API Tools', text:'Primeiro ano completo com servidor físico, 500 sessões, setup, Client STI-AS e API REST ZICTEC Tools; conectado ao bundle anual ZT_STIAS_HYBRID_BUNDLE_A para renovação.', tags:['SERVIDOR FÍSICO INCLUSO','Com setup','Com Tools','R$ 49.464,44'], url:shopLinks.hybridServer, next:['Usar cupom hybrid7800 quando aplicável','Separar suporte operacional/expansões fora do escopo','No 2º ano, referenciar renovação pelo bundle ZT_STIAS_HYBRID_BUNDLE_A']},
+      campaigns: {title:'Origem Verificada / Campanhas', text:'Camada de Identificação/Branded Call com logo e campanhas, dependente de Autenticação funcionando ou em plano de ativação.', tags:['Identificação','Branded Call','Campanhas'], url:shopLinks.consult, next:['Confirmar Autenticação em produção ou plano para ativá-la','Levantar marcas/campanhas e responsáveis','Ofertar add-on de backoffice/campanhas']},
+      consult: {title:'Validação técnica antes do checkout', text:'Cenário ainda indefinido: vendor, topologia, ABR ou servidor precisam de diagnóstico antes de empurrar um SKU fechado.', tags:['Diagnóstico','Proposta formal','Evitar compra errada'], url:shopLinks.consult, next:['Coletar vendor/versão/capacidade do SBC','Validar status ABR, rotas e credenciais','Definir se o caminho será REST, SIP/ISBC, ProSBC local ou pacote com servidor']}
     };
     function val(name){ return document.querySelector(`input[name="${name}"]:checked`)?.value; }
     function recommend(){
-      const goal=val('goal'), sbc=val('sbc'), abr=val('abr'), ops=val('ops');
+      const goal=val('goal'), sbc=val('sbc'), abr=val('abr'), ops=val('ops'), server=val('server');
       let key='start';
       if(goal==='campaigns' || ops==='campaigns') key='campaigns';
-      else if(sbc==='legacy' || goal==='modernize') key='modernize';
-      else if(goal==='operate' || ops==='reports' || ops==='full') key='operate';
-      else if(sbc==='prosbc' && (abr==='uat' || abr==='prod')) key='hybrid';
+      else if(server==='yes' && ops==='full') key='hybridServer';
+      else if(server==='yes' || sbc==='legacy' || goal==='modernize') key='modernize';
+      else if(ops==='sip' || (goal==='operate' && sbc!=='prosbc')) key='operate';
+      else if(ops==='reports') key='api';
+      else if(ops==='full' || (sbc==='prosbc' && (abr==='uat' || abr==='prod'))) key='hybrid';
+      else if(sbc==='other' || sbc==='unknown' || abr==='unclear' || server==='unsure') key='consult';
       const p=packages[key];
       recTitle.textContent=p.title; recText.textContent=p.text;
       recTags.innerHTML=p.tags.map(t=>`<span class="score-pill">${t}</span>`).join('') + `<span class="score-pill">Status ABR: ${abr.toUpperCase()}</span>`;
       recNext.innerHTML=p.next.map(n=>`<li>${n}</li>`).join('');
+      recShop.href=p.url;
+      recShop.textContent=p.url.startsWith('#') ? 'Ver pré-pacotes' : 'Ver SKU no shop';
+      recShop.target=p.url.startsWith('#') ? '' : '_blank';
+      recShop.rel=p.url.startsWith('#') ? '' : 'noopener';
     }
     document.querySelectorAll('#journeyForm input').forEach(i=>i.addEventListener('change',recommend));
     copyBriefing.addEventListener('click', async ()=>{
@@ -271,6 +297,7 @@ Objetivo: ${val('goal')}
 SBC/vendor: ${val('sbc')}
 Status ABR: ${val('abr')}
 Operação: ${val('ops')}
+Servidor físico: ${val('server')}
 Próximos passos:
 - ${[...recNext.querySelectorAll('li')].map(li=>li.textContent).join('\\n- ')}`;
       try { await navigator.clipboard.writeText(text); } catch(e) { window.prompt('Copie o briefing:', text); }
