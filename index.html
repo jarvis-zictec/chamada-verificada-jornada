@@ -91,6 +91,7 @@
           <label class="option"><input type="radio" name="ops" value="basic" checked> Projeto pontual + banco de horas</label>
           <label class="option"><input type="radio" name="ops" value="reports"> Tools, relatórios, auditoria e API REST</label>
           <label class="option"><input type="radio" name="ops" value="sip"> SIP via ISBC compartilhado</label>
+          <label class="option"><input type="radio" name="ops" value="client"> Só licença Client ProSBC adicional</label>
           <label class="option"><input type="radio" name="ops" value="full"> ProSBC + Tools/API no mesmo desenho</label>
           <label class="option"><input type="radio" name="ops" value="campaigns"> Gestão de campanhas/identificação enriquecida</label>
         </div></div>
@@ -125,8 +126,8 @@
     <section><div class="container"><div class="section-head"><h2>Matriz rápida de recomendação</h2><p>Para o comercial responder rápido sem transformar toda conversa em engenharia consultiva.</p></div><div class="card matrix"><table><thead><tr><th>Sinal do cliente</th><th>Oferta sugerida</th><th>Próximo passo</th></tr></thead><tbody>
       <tr><td>“Só preciso implantar/homologar o primeiro SBC”</td><td>ZT_STIAS_PROSBC_SETUP_CLIENT_A · SETUP + Client ProSBC 1 ano</td><td>Evita compra incompleta; 30% de desconto sobre setup + client; 2º ano renova só a licença Client ProSBC</td></tr>
       <tr><td>“Preciso de SIP/ISBC Cloud”</td><td>Starter AS-OOB SaaS (B)</td><td>Validar limites Light; setup promocionalmente isento</td></tr>
-      <tr><td>“Tenho ProSBC suportado e quero consumir API”</td><td>API REST ZICTEC Tools (C)</td><td>Setup isento se for ambiente já homologado/com suporte; caso contrário, avaliar A</td></tr>
-      <tr><td>“Tenho mais SBCs ProSBC já existentes”</td><td>Licenças Client ProSBC adicionais (D)</td><td>SBC adicional já existente paga apenas licença; SBC novo pode exigir setup/PS</td></tr>
+      <tr><td>“Tenho ProSBC suportado e quero consumir API”</td><td>API REST ZICTEC Tools (C)</td><td>Recomendar API quando o consumo é REST direto; se também precisar Client ProSBC, usar bundle híbrido</td></tr>
+      <tr><td>“Tenho mais SBCs ProSBC já existentes”</td><td>ZT_STIAS_PROSBC_CLIENT_A · Licença Client ProSBC adicional</td><td>SBC adicional já existente paga apenas licença; SBC novo ou não homologado pode exigir setup/PS</td></tr>
       <tr><td>“Não tenho ProSBC pronto / preciso comprar tudo funcional”</td><td>ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A · Server + 500 sessões + SETUP + Client</td><td>Inclui hardware, licença básica ProSBC de 500 sessões e o escopo do ZT_STIAS_PROSBC_SETUP_CLIENT_A</td></tr>
       <tr><td>“Quero ProSBC completo + API no mesmo primeiro ano”</td><td>ZT_PROSBC_HW500_STIAS_HYBRID_API_A · Server + 500 sessões + Client + API Tools</td><td>Usar link/cupom hybrid7800 quando aplicável; preço final R$ 49.464,44 e renovação referenciada pelo bundle híbrido anual</td></tr>
       <tr><td>“Quero logo/nome na chamada”</td><td>Add-on Campanhas / Origem Verificada</td><td>Confirmar autenticação e processo de backoffice</td></tr>
@@ -253,6 +254,7 @@
       setupClient: 'https://shop.zictec.com.br/product/stir-shaken-setup-client-prosbc-zictec-1-ano-1-sbc/',
       hwSetupClient: 'https://shop.zictec.com.br/product/server-prosbc-500-sessoes-setup-client-sti-as-pacote-completo/',
       api: 'https://shop.zictec.com.br/product/stir-shaken-api-rest-zictec-tools-licenca-anual/',
+      client: 'https://shop.zictec.com.br/product/stir-shaken-client-prosbc-zictec-licenca-anual-por-sbc/',
       saasSip: 'https://shop.zictec.com.br/product/pacote-promocional-stir_shaken-starter-as-oob-saas-anual/',
       hybridBundle: 'https://shop.zictec.com.br/product/stir-shaken-api-rest-client-prosbc-bundle-saas-hibrido-anual/',
       hybridServer: 'https://shop.zictec.com.br/product/server-prosbc-500-sessoes-setup-client-sti-as-api-tools-pacote-hibrido-1-ano/',
@@ -262,6 +264,7 @@
       start: {title:'ZT_STIAS_PROSBC_SETUP_CLIENT_A · SETUP + Client ProSBC 1 ano', text:'Para o primeiro SBC ProSBC já existente: une implantação/homologação/produção com ABR + licença Client STI-AS por 1 ano, sem Tools/relatórios/API.', tags:['Sem servidor','Com setup','Sem Tools','R$ 18.400,04'], url:shopLinks.setupClient, next:['Confirmar se é o primeiro SBC ProSBC do projeto','Validar contrato vigente para boleto em até 12x sem juros','Registrar que no 2º ano renova apenas a licença Client ProSBC']},
       modernize: {title:'ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A · Server + 500 sessões + SETUP + Client', text:'Para sair com a base ProSBC funcional: servidor físico, 500 sessões, setup e Client STI-AS. Não inclui Tools/relatórios/API.', tags:['SERVIDOR FÍSICO INCLUSO','Com setup','Sem Tools','R$ 33.864,44'], url:shopLinks.hwSetupClient, next:['Confirmar se o servidor R420 mid atende capacidade/topologia','Validar necessidade de redundância, transcoding e expansões','Separar suporte operacional/banco de horas como contratação adicional']},
       api: {title:'ZT_STIAS_API_A · Tools / Relatórios / API REST', text:'Para cliente compatível que consome a solução ZICTEC diretamente por API REST, sem ISBC/SIP e sem servidor físico dedicado.', tags:['REST direto','Tools + relatórios','Sem ISBC','R$ 31.200,00'], url:shopLinks.api, next:['Validar compatibilidade técnica para consumo REST direto','Confirmar necessidade de validação de número A, CDR e auditoria','Se houver SIP, trocar para SAAS_STIAS_OOB_A']},
+      client: {title:'ZT_STIAS_PROSBC_CLIENT_A · Client ProSBC adicional por SBC', text:'Para ProSBC adicional já existente/homologado quando a necessidade é apenas licenciar o cliente local em outro SBC, sem setup, sem servidor e sem API SaaS.', tags:['Client ProSBC','SBC adicional','Sem setup','R$ 12.000,00'], url:shopLinks.client, next:['Confirmar que o SBC adicional já existe e está homologado/suportado','Se for primeiro SBC, usar ZT_STIAS_PROSBC_SETUP_CLIENT_A','Se também precisar Tools/API, trocar para bundle híbrido']},
       operate: {title:'SAAS_STIAS_OOB_A · Tools + ISBC SIP compartilhado', text:'Para quem precisa consumir a solução ZICTEC via SIP: adiciona ISBC compartilhado à camada Tools/relatórios/auditoria.', tags:['SIP via ISBC','Tools + relatórios','Setup isento','R$ 39.000,00'], url:shopLinks.saasSip, next:['Validar limites do Plano Light: CAPS, bilhetes/mês e IPs origem','Confirmar que o cliente precisa de SIP, não REST direto','Registrar isenção promocional de setup quando aplicável']},
       hybrid: {title:'ZT_STIAS_HYBRID_BUNDLE_A · API + Client ProSBC', text:'Bundle anual sem servidor e sem setup: API REST SaaS ZICTEC Tools + Client ProSBC para 1 SBC; referência de operação/renovação.', tags:['Sem servidor','Sem setup','Com Tools','R$ 39.000,00'], url:shopLinks.hybridBundle, next:['Confirmar que setup/homologação inicial já foi resolvido ou será contratado à parte','Validar ProSBC existente/homologado','Usar como referência anual de renovação do desenho híbrido']},
       hybridServer: {title:'ZT_PROSBC_HW500_STIAS_HYBRID_API_A · Server + 500 sessões + Client + API Tools', text:'Primeiro ano completo com servidor físico, 500 sessões, setup, Client STI-AS e API REST ZICTEC Tools; conectado ao bundle anual ZT_STIAS_HYBRID_BUNDLE_A para renovação.', tags:['SERVIDOR FÍSICO INCLUSO','Com setup','Com Tools','R$ 49.464,44'], url:shopLinks.hybridServer, next:['Usar cupom hybrid7800 quando aplicável','Separar suporte operacional/expansões fora do escopo','No 2º ano, referenciar renovação pelo bundle ZT_STIAS_HYBRID_BUNDLE_A']},
@@ -271,14 +274,18 @@
     function val(name){ return document.querySelector(`input[name="${name}"]:checked`)?.value; }
     function recommend(){
       const goal=val('goal'), sbc=val('sbc'), abr=val('abr'), ops=val('ops'), server=val('server');
+      const unknown = sbc==='unknown' || abr==='unclear' || server==='unsure';
       let key='start';
       if(goal==='campaigns' || ops==='campaigns') key='campaigns';
-      else if(server==='yes' && ops==='full') key='hybridServer';
+      else if(unknown) key='consult';
+      else if(ops==='sip') key='operate';
+      else if(ops==='client') key=(sbc==='prosbc' && server!=='yes') ? 'client' : 'consult';
+      else if(ops==='full') key=(server==='yes' || sbc==='legacy' || goal==='modernize') ? 'hybridServer' : (sbc==='prosbc' ? 'hybrid' : 'consult');
+      else if(ops==='reports') key=(server==='yes' || sbc==='legacy' || goal==='modernize') ? 'hybridServer' : 'api';
+      else if(goal==='operate') key=(sbc==='prosbc' ? 'api' : 'operate');
       else if(server==='yes' || sbc==='legacy' || goal==='modernize') key='modernize';
-      else if(ops==='sip' || (goal==='operate' && sbc!=='prosbc')) key='operate';
-      else if(ops==='reports') key='api';
-      else if(ops==='full' || (sbc==='prosbc' && (abr==='uat' || abr==='prod'))) key='hybrid';
-      else if(sbc==='other' || sbc==='unknown' || abr==='unclear' || server==='unsure') key='consult';
+      else if(sbc==='other') key='consult';
+      else key='start';
       const p=packages[key];
       recTitle.textContent=p.title; recText.textContent=p.text;
       recTags.innerHTML=p.tags.map(t=>`<span class="score-pill">${t}</span>`).join('') + `<span class="score-pill">Status ABR: ${abr.toUpperCase()}</span>`;
