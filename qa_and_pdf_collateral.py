@@ -115,8 +115,11 @@ for s in prs.slides:
         if hasattr(sh, 'text'):
             texts.append(sh.text)
 ppt_text='\n'.join(texts)
-for kw in ['Origem Verificada','ZT_STIAS_PROSBC_SETUP_CLIENT_A','API REST Tools','Starter AS-OOB SaaS','hybrid7800']:
+ppt_norm = ppt_text.replace('\n', '').replace(' ', '')
+for kw in ['Origem Verificada','API REST Tools','Starter AS-OOB SaaS','hybrid7800']:
     assert kw in ppt_text, kw
+for kw in ['ZT_STIAS_PROSBC_SETUP_CLIENT_A', 'ZT_PROSBC_HW500_STIAS_HYBRID_API_A']:
+    assert kw.replace(' ', '') in ppt_norm, kw
 Document(str(DOCX))
 with zipfile.ZipFile(PPTX) as z:
     assert '[Content_Types].xml' in z.namelist()

@@ -245,6 +245,8 @@ def add_bg(slide, color=BG):
 def add_text(slide, text, x, y, w, h, size=18, color=INK, bold=False, align=PP_ALIGN.LEFT, font='Aptos', valign=MSO_ANCHOR.TOP):
     box = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(h))
     box.text_frame.clear()
+    box.text_frame.word_wrap = True
+    box.text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
     box.text_frame.margin_left = Inches(0.02)
     box.text_frame.margin_right = Inches(0.02)
     box.text_frame.margin_top = Inches(0.02)
@@ -259,6 +261,33 @@ def add_text(slide, text, x, y, w, h, size=18, color=INK, bold=False, align=PP_A
     run.font.name = font
     run.font.color.rgb = color
     return box
+
+
+def break_sku(text):
+    """Manual line-breaks for long SKUs; PowerPoint often won't wrap underscores cleanly."""
+    breaks = {
+        'ZT_STIAS_PROSBC_SETUP_CLIENT_A': 'ZT_STIAS_PROSBC_\nSETUP_CLIENT_A',
+        'ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A': 'ZT_PROSBC_HW500_\nSTIAS_SETUP_CLIENT_A',
+        'ZT_PROSBC_HW500_STIAS_HYBRID_API_A': 'ZT_PROSBC_HW500_\nSTIAS_HYBRID_API_A',
+        'ZT_STIAS_PROSBC_CLIENT_A': 'ZT_STIAS_PROSBC_\nCLIENT_A',
+        'ZT_STIAS_HYBRID_BUNDLE_A': 'ZT_STIAS_HYBRID_\nBUNDLE_A',
+        'SAAS_STIAS_OOB_A': 'SAAS_STIAS_\nOOB_A',
+    }
+    return breaks.get(text, text)
+
+
+def readable(text):
+    replacements = {
+        'ZT_STIAS_PROSBC_SETUP_CLIENT_A': 'ZT_STIAS_PROSBC_\nSETUP_CLIENT_A',
+        'ZT_PROSBC_HW500_STIAS_SETUP_CLIENT_A': 'ZT_PROSBC_HW500_\nSTIAS_SETUP_CLIENT_A',
+        'ZT_PROSBC_HW500_STIAS_HYBRID_API_A': 'ZT_PROSBC_HW500_\nSTIAS_HYBRID_API_A',
+        'ZT_STIAS_PROSBC_CLIENT_A': 'ZT_STIAS_PROSBC_\nCLIENT_A',
+        'ZT_STIAS_API_A': 'ZT_STIAS_\nAPI_A',
+        'SAAS_STIAS_OOB_A': 'SAAS_STIAS_\nOOB_A',
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    return text
 
 
 def add_round_rect(slide, x, y, w, h, fill=WHITE, line=LINE, radius=MSO_SHAPE.ROUNDED_RECTANGLE):
@@ -350,11 +379,11 @@ for i, spec in enumerate(slides):
                 for r in p.runs: r.font.color.rgb=WHITE; r.font.bold=True; r.font.size=Pt(11)
         for r,row in enumerate(rows,1):
             for c,val in enumerate(row):
-                cell=table.cell(r,c); cell.text=val
+                cell=table.cell(r,c); cell.text=readable(val)
                 cell.fill.solid(); cell.fill.fore_color.rgb = SOFT if r%2==0 else WHITE
                 for p in cell.text_frame.paragraphs:
                     for run in p.runs:
-                        run.font.size=Pt(9.2); run.font.color.rgb=INK if c!=1 else ORANGE; run.font.bold=(c==1)
+                        run.font.size=Pt(8.2 if c==1 else 9.2); run.font.color.rgb=INK if c!=1 else ORANGE; run.font.bold=(c==1)
     elif 'steps' in spec:
         for j,step in enumerate(spec['steps']):
             y=1.55+j*0.92
@@ -367,8 +396,8 @@ for i, spec in enumerate(slides):
         for j,(sku,name,price) in enumerate(rows):
             x=0.75+(j%2)*6.05; y=1.55+(j//2)*1.55
             add_round_rect(slide, x, y, 5.55, 1.18, fill=WHITE, line=ORANGE if j in (3,5) else LINE)
-            add_text(slide, sku, x+0.25, y+0.18, 2.95, 0.25, 10.5, ORANGE, True)
-            add_text(slide, name, x+0.25, y+0.53, 3.15, 0.3, 12.5, NAVY, True)
+            add_text(slide, break_sku(sku), x+0.25, y+0.12, 2.95, 0.43, 8.8, ORANGE, True)
+            add_text(slide, name, x+0.25, y+0.58, 3.15, 0.34, 11.2, NAVY, True)
             add_text(slide, price, x+3.55, y+0.38, 1.65, 0.35, 15, NAVY, True, align=PP_ALIGN.RIGHT)
         add_text(slide, 'Nota: pacote híbrido 1º ano usa cupom promocional hybrid7800 conforme página do shop.', 0.78, 6.55, 11.6, 0.28, 10, ORANGE, True, align=PP_ALIGN.CENTER)
     elif i == 10:
