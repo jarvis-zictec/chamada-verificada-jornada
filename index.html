@@ -24,14 +24,14 @@
     .package{display:flex;flex-direction:column;gap:16px} .package .label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--orange);font-weight:900} .package.highlight .label{color:#ffb199} .package ul{margin:0;padding-left:18px;color:#55536a} .package li{margin:7px 0} .package .best{display:inline-flex;align-self:flex-start;padding:7px 10px;border-radius:999px;background:#eafff5;color:#08784c;font-size:12px;font-weight:900}
     .matrix{overflow:hidden;padding:0} table{width:100%;border-collapse:collapse;background:white} th,td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top} th{background:var(--navy);color:white;font-size:13px;text-transform:uppercase;letter-spacing:.04em} td{color:#4d4b62} tr:last-child td{border-bottom:0}
     .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px} .product-card{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 34px rgba(27,22,72,.05)} .product-card h3{font-size:16px;color:var(--navy);line-height:1.2;min-height:58px;margin:10px 0} .pill{display:inline-flex;padding:6px 9px;border-radius:999px;background:var(--soft);color:var(--orange);font-size:11px;font-weight:900} .sku{font-size:12px;color:var(--muted);min-height:34px} .price{font-size:18px;font-weight:900;color:var(--navy);margin:8px 0} .product-card a{font-weight:800;color:var(--orange);text-decoration:none;font-size:14px}
-    .configurator{background:var(--navy);color:white} .configurator h2,.configurator .section-head p{color:white} .quiz{display:grid;grid-template-columns:repeat(4,1fr);gap:15px} .quiz .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);box-shadow:none} .quiz .card h3{color:white} .quiz .card p{color:#d8d6e8} .quiz .icon{background:rgba(255,255,255,.12);color:#ffb199}
+    .configurator{background:var(--navy);color:white} .configurator h2,.configurator .section-head p{color:white} .quiz{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}.quiz-form{display:grid;gap:18px}.question{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:24px;padding:20px}.question h3{margin:0 0 12px;color:white}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.option{display:flex;gap:8px;align-items:flex-start;padding:13px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);cursor:pointer;color:#ffffff;font-size:15px;line-height:1.35}.option:hover{border-color:#ffb199;background:rgba(255,255,255,.14)}.option:has(input:checked){border-color:var(--orange);box-shadow:0 0 0 2px rgba(255,90,31,.22);background:rgba(255,90,31,.18)}.option input{margin-top:3px;accent-color:var(--orange)}.result-card{position:sticky;top:96px;background:white;color:var(--ink);border-radius:28px;padding:26px;box-shadow:var(--shadow)}.result-card h3{font-size:28px;margin:0 0 8px;color:var(--navy)}.result-card p{color:var(--muted)}.score-row{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.score-pill{padding:7px 10px;border-radius:999px;background:var(--soft);color:var(--orange);font-size:12px;font-weight:900}.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn-small{padding:11px 14px;font-size:13px}.next-list{padding-left:19px;color:#4d4b62}.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.checklist .card ul{margin:10px 0 0;padding-left:18px;color:#3f3d52}.checklist .card li{margin:7px 0}.badge-soft{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--soft);color:var(--orange);font-weight:900;font-size:12px}.toast{position:fixed;right:22px;bottom:22px;background:var(--navy);color:white;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}
     .faq details{background:white;border:1px solid var(--line);border-radius:18px;padding:18px 20px;margin:12px 0} .faq summary{cursor:pointer;font-weight:900;color:var(--navy)} .faq p{color:var(--muted);margin-bottom:0} .cta{background:linear-gradient(135deg,var(--orange),#f97316);border-radius:36px;padding:42px;color:white;display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;box-shadow:0 30px 90px rgba(255,90,31,.25)} .cta h2{color:white} .cta p{font-size:18px;max-width:720px} .cta .btn{background:white;color:var(--orange)} footer{padding:36px 0;color:#7b798b;border-top:1px solid var(--line);background:white} footer .container{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    @media (max-width:960px){.hero-grid,.grid-2,.concept-map,.cta{grid-template-columns:1fr} .grid-3,.stats,.products,.quiz{grid-template-columns:repeat(2,1fr)} .arrow{justify-content:center;transform:rotate(90deg)} .menu{display:none}}
-    @media (max-width:620px){.grid-3,.stats,.products,.quiz{grid-template-columns:1fr} .hero{padding-top:42px} .cta{padding:28px} th,td{padding:12px}}
+    @media (max-width:960px){.hero-grid,.grid-2,.concept-map,.cta{grid-template-columns:1fr} .grid-3,.stats,.products,.quiz,.checklist{grid-template-columns:repeat(2,1fr)} .arrow{justify-content:center;transform:rotate(90deg)} .menu{display:none}}
+    @media (max-width:620px){.grid-3,.stats,.products,.quiz,.checklist,.options{grid-template-columns:1fr} .hero{padding-top:42px} .cta{padding:28px} th,td{padding:12px}}
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><img src="assets/logo_blue.png" alt="ZICTEC"/> <span>Chamada Verificada</span></a><div class="menu"><a href="#conceitos">Conceitos</a><a href="#pacotes">Pacotes</a><a href="#jornada">Jornada</a><a href="#shop">Shop</a><a href="#faq">FAQ</a><a class="btn btn-primary" href="https://www.calendly.com/zictec/reuniao" target="_blank">Agendar diagnóstico</a></div></div></nav>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><img src="assets/logo_blue.png" alt="ZICTEC"/> <span>Chamada Verificada</span></a><div class="menu"><a href="#conceitos">Conceitos</a><a href="#pacotes">Pacotes</a><a href="#jornada">Jornada</a><a href="#checklist">Checklist</a><a href="#shop">Shop</a><a href="#faq">FAQ</a><a class="btn btn-primary" href="https://www.calendly.com/zictec/reuniao" target="_blank">Agendar diagnóstico</a></div></div></nav>
   <main id="top">
     <section class="hero"><div class="container hero-grid"><div><span class="eyebrow">ZICTEC · STIR/SHAKEN · Origem Verificada</span><h1>Uma jornada simples para autenticar chamadas e evoluir para Origem Verificada.</h1><p class="lead">Página de trabalho para alinhar equipe comercial, operação técnica e cliente: conceitos corretos, pacotes claros, checklist de contratação e caminho para ecommerce.</p><div class="hero-actions"><a class="btn btn-primary" href="#configurador">Encontrar pacote recomendado</a><a class="btn btn-ghost" href="#pacotes">Ver pacotes</a></div><div class="stats"><div class="stat"><b>Start</b><span>cumprir requisito regulatório</span></div><div class="stat"><b>Operate</b><span>SaaS + suporte + auditoria</span></div><div class="stat"><b>Hybrid</b><span>ProSBC + API ZICTEC</span></div><div class="stat"><b>Modernize</b><span>SBC, licença e topologia</span></div></div></div><aside class="hero-card"><img src="assets/hero.png" alt="Ilustração Chamada Verificada"/><div class="hero-badge"><strong>Princípio central</strong>Identificação/Origem Verificada depende de Autenticação, mas não é a mesma coisa.</div></aside></div></section>
 
@@ -51,11 +51,52 @@
       <article class="step"><h3>Checkout ou lead qualificado</h3><p>Compra inicia validação/kickoff; ambientes complexos viram proposta formal.</p></article>
     </div><aside class="card highlight"><h3>Regra comercial importante</h3><p>A contratação pode iniciar o processo, mas produção depende de validação técnica, premissas, credenciais, rotas, homologação e aceite. Isso protege a ZICTEC e deixa claro para o cliente que não é “plug and play universal”.</p><br/><img src="assets/technical.png" alt="Diagrama técnico" style="width:100%;border-radius:20px"></aside></div></div></section>
 
-    <section id="configurador" class="configurator"><div class="container"><div class="section-head"><h2>Mini-configurador para a equipe comercial</h2><p>As perguntas abaixo podem virar formulário no site, CRM ou pré-checkout.</p></div><div class="quiz">
-      <article class="card"><div class="icon">1</div><h3>Qual é o objetivo?</h3><p>Regulação, operação assistida, topologia, campanhas ou tudo junto?</p></article>
-      <article class="card"><div class="icon">2</div><h3>Qual SBC/vendor?</h3><p>ProSBC/Telcobridges, outro vendor, ambiente legado ou “não sei”.</p></article>
-      <article class="card"><div class="icon">3</div><h3>Status ABR?</h3><p>Sem adesão, em adesão, UAT, produção ou credenciais disponíveis.</p></article>
-      <article class="card"><div class="icon">4</div><h3>Quer auditoria?</h3><p>Relatórios de autenticação, falhas, volumetria e suporte operacional.</p></article>
+    <section id="configurador" class="configurator"><div class="container"><div class="section-head"><h2>Configurador comercial interativo</h2><p>Responda o mínimo necessário para recomendar uma trilha, gerar briefing de pré-venda e reduzir idas e vindas com o cliente.</p></div><div class="quiz">
+      <form class="quiz-form" id="journeyForm">
+        <div class="question"><h3>1. Objetivo principal</h3><div class="options">
+          <label class="option"><input type="radio" name="goal" value="reg" checked> Cumprir obrigação regulatória / autenticar chamadas</label>
+          <label class="option"><input type="radio" name="goal" value="operate"> Operar com suporte, relatórios e menor dor técnica</label>
+          <label class="option"><input type="radio" name="goal" value="modernize"> Modernizar SBC/topologia junto com o projeto</label>
+          <label class="option"><input type="radio" name="goal" value="campaigns"> Ativar Identificação / Origem Verificada com marca e campanhas</label>
+        </div></div>
+        <div class="question"><h3>2. Ambiente de voz</h3><div class="options">
+          <label class="option"><input type="radio" name="sbc" value="prosbc" checked> Já usa ProSBC/Telcobridges</label>
+          <label class="option"><input type="radio" name="sbc" value="other"> Usa outro SBC/vendor</label>
+          <label class="option"><input type="radio" name="sbc" value="legacy"> SBC legado, no limite ou sem redundância</label>
+          <label class="option"><input type="radio" name="sbc" value="unknown"> Cliente ainda não sabe informar</label>
+        </div></div>
+        <div class="question"><h3>3. Status ABR / homologação</h3><div class="options">
+          <label class="option"><input type="radio" name="abr" value="none" checked> Ainda não iniciou</label>
+          <label class="option"><input type="radio" name="abr" value="uat"> Em UAT/homologação</label>
+          <label class="option"><input type="radio" name="abr" value="prod"> Já possui produção/credenciais</label>
+          <label class="option"><input type="radio" name="abr" value="unclear"> Não sabe / precisa diagnóstico</label>
+        </div></div>
+        <div class="question"><h3>4. Operação desejada</h3><div class="options">
+          <label class="option"><input type="radio" name="ops" value="basic" checked> Projeto pontual + banco de horas</label>
+          <label class="option"><input type="radio" name="ops" value="reports"> Relatórios, auditoria e suporte recorrente</label>
+          <label class="option"><input type="radio" name="ops" value="full"> Operação assistida com API/SaaS ZICTEC</label>
+          <label class="option"><input type="radio" name="ops" value="campaigns"> Gestão de campanhas/identificação enriquecida</label>
+        </div></div>
+      </form>
+      <aside class="result-card" aria-live="polite">
+        <span class="badge-soft">Pacote recomendado</span>
+        <h3 id="recTitle">Start / Essencial Regulatória</h3>
+        <p id="recText">Começar com diagnóstico, setup, homologação e go-live assistido.</p>
+        <div class="score-row" id="recTags"></div>
+        <h4>Próximos passos</h4>
+        <ul class="next-list" id="recNext"></ul>
+        <div class="result-actions">
+          <button type="button" class="btn btn-primary btn-small" id="copyBriefing">Copiar briefing</button>
+          <a class="btn btn-ghost btn-small" href="#shop">Ver itens do shop</a>
+          <a class="btn btn-ghost btn-small" href="#faq">FAQ de objeções</a>
+        </div>
+      </aside>
+    </div></div></section>
+
+    <section id="checklist"><div class="container"><div class="section-head"><h2>Checklist de contratação/kickoff</h2><p>Material para transformar uma conversa comercial em briefing técnico utilizável pela operação.</p></div><div class="checklist">
+      <article class="card"><div class="icon">C</div><h3>Cliente e regulatório</h3><ul><li>Razão social, CNPJ e responsável técnico</li><li>Status ABR Telecom: não iniciado, UAT ou produção</li><li>Credenciais/certificados disponíveis</li><li>Objetivo: Autenticação, Identificação ou ambos</li></ul></article>
+      <article class="card"><div class="icon">T</div><h3>Topologia e tráfego</h3><ul><li>SBC/vendor, versão e capacidade</li><li>Rotas/interconexões e volumetria</li><li>IN-BAND, OUT-OF-BAND ou indefinido</li><li>Necessidade de ProSBC, licença ou hardware</li></ul></article>
+      <article class="card"><div class="icon">O</div><h3>Operação e aceite</h3><ul><li>Relatórios/auditoria esperados</li><li>Suporte pós-go-live e SLA desejado</li><li>Premissas fora de escopo</li><li>Critério de homologação e aceite</li></ul></article>
     </div></div></section>
 
     <section><div class="container"><div class="section-head"><h2>Matriz rápida de recomendação</h2><p>Para o comercial responder rápido sem transformar toda conversa em engenharia consultiva.</p></div><div class="card matrix"><table><thead><tr><th>Sinal do cliente</th><th>Oferta sugerida</th><th>Próximo passo</th></tr></thead><tbody>
@@ -167,5 +208,43 @@
     <section><div class="container"><div class="cta"><div><h2>Próximo passo: transformar esta página em playbook + funil</h2><p>Criar formulário de checklist, páginas de pacote no shop, templates de proposta e roteiro comercial para cada trilha.</p></div><a class="btn" href="https://www.calendly.com/zictec/reuniao" target="_blank">Agendar reunião ZICTEC</a></div></div></section>
   </main>
   <footer><div class="container"><span>ZICTEC · Chamada Verificada · Jornada Comercial</span><span>Contato: contato@zictec.com.br · +55 47 3306-4435</span></div></footer>
+  <div class="toast" id="toast">Briefing copiado.</div>
+  <script>
+    const packages = {
+      start: {title:'Start / Essencial Regulatória', text:'Começar com diagnóstico, setup, homologação ABR e go-live assistido.', tags:['CAPEX/Direto','Setup','Homologação'], next:['Confirmar status ABR e credenciais','Levantar SBC, rotas e volumetria','Enviar escopo Start e banco de horas']},
+      operate: {title:'Operate / SaaS ZICTEC', text:'Recomendado quando o cliente quer suporte recorrente, visibilidade, relatórios e menor dor técnica.', tags:['OPEX/SaaS','API ZICTEC','Relatórios'], next:['Validar integração OOB/INB','Definir SLA e relatórios esperados','Ofertar SaaS anual + suporte recorrente']},
+      hybrid: {title:'Hybrid ProSBC + API ZICTEC', text:'Para aproveitar ProSBC existente ou combinar ambiente do cliente com API/SaaS ZICTEC.', tags:['Híbrido','ProSBC','Script licenciado'], next:['Validar versão ProSBC/Telcobridges','Checar licença/sessões e script','Definir responsabilidades entre cliente e ZICTEC']},
+      modernize: {title:'Modernize / ProSBC Completo', text:'Quando o projeto também precisa resolver capacidade, redundância, hardware, licenças ou topologia.', tags:['Modernização','Hardware','Licenças'], next:['Dimensionar sessões e hardware','Revisar interconexões e redundância','Separar escopo de implantação e suporte']},
+      campaigns: {title:'Origem Verificada / Campanhas', text:'Camada de Identificação/Branded Call com logo e campanhas, dependente de Autenticação funcionando.', tags:['Identificação','Branded Call','Campanhas'], next:['Confirmar Autenticação em produção ou plano para ativá-la','Levantar marcas/campanhas e responsáveis','Ofertar add-on de backoffice/campanhas']}
+    };
+    function val(name){ return document.querySelector(`input[name="${name}"]:checked`)?.value; }
+    function recommend(){
+      const goal=val('goal'), sbc=val('sbc'), abr=val('abr'), ops=val('ops');
+      let key='start';
+      if(goal==='campaigns' || ops==='campaigns') key='campaigns';
+      else if(sbc==='legacy' || goal==='modernize') key='modernize';
+      else if(goal==='operate' || ops==='reports' || ops==='full') key='operate';
+      else if(sbc==='prosbc' && (abr==='uat' || abr==='prod')) key='hybrid';
+      const p=packages[key];
+      recTitle.textContent=p.title; recText.textContent=p.text;
+      recTags.innerHTML=p.tags.map(t=>`<span class="score-pill">${t}</span>`).join('') + `<span class="score-pill">Status ABR: ${abr.toUpperCase()}</span>`;
+      recNext.innerHTML=p.next.map(n=>`<li>${n}</li>`).join('');
+    }
+    document.querySelectorAll('#journeyForm input').forEach(i=>i.addEventListener('change',recommend));
+    copyBriefing.addEventListener('click', async ()=>{
+      const text = `Briefing Chamada Verificada ZICTEC
+Pacote recomendado: ${recTitle.textContent}
+Resumo: ${recText.textContent}
+Objetivo: ${val('goal')}
+SBC/vendor: ${val('sbc')}
+Status ABR: ${val('abr')}
+Operação: ${val('ops')}
+Próximos passos:
+- ${[...recNext.querySelectorAll('li')].map(li=>li.textContent).join('\\n- ')}`;
+      try { await navigator.clipboard.writeText(text); } catch(e) { window.prompt('Copie o briefing:', text); }
+      toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 1800);
+    });
+    recommend();
+  </script>
 </body>
 </html>
